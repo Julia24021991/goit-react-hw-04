@@ -8,5 +8,5 @@ export const ImageGallery = ({ photos, onClick }) => {
                 </li>
             ))}
         </ul>
-    )
-}
+    );
+};

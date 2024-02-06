@@ -2,13 +2,13 @@ import toast from 'react-hot-toast';
 
 export const SearchBar = ({ onSearch }) => {
     const handleSubmit = (event) => {
-        event.preventDefault;
+        event.preventDefault();
         if (event.target.elements.query.value === "") {
             toast("The string is empty!")
             return;
         }
         onSearch(event.target.elements.query.value)
-        event.target.reset;
+        event.target.reset();
     }
     return (
         <header>
