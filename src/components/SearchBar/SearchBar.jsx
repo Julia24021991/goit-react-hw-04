@@ -13,20 +13,20 @@ export const SearchBar = ({ onSearch }) => {
         event.target.reset();
     }
     return (
-        <div className={css.container}>
-            <header>
-                <form onSubmit={handleSubmit} className={css.form}>
-                    <input
-                        className={css.input}
-                        type="text"
-                        autoComplete="off"
-                        autoFocus
-                        placeholder="Search images and photos"
-                        name="query"
-                    />
-                    <button className={css.button} type="submit"><FcSearch />    Search</button>
-                </form>
-            </header>
-        </div>
+
+        <header>
+            <form onSubmit={handleSubmit} className={css.form}>
+                <input
+                    className={css.input}
+                    type="text"
+                    autoComplete="off"
+                    autoFocus
+                    placeholder="Search images and photos"
+                    name="query"
+                />
+                <button className={css.button} type="submit"><FcSearch />    Search</button>
+            </form>
+        </header>
+
     )
 }

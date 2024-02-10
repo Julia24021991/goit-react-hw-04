@@ -7,7 +7,7 @@ export const ImageCard = ({ photo: { urls, alt_description
         <div>
             <img className={css.photo} src={urls.small} alt={alt_description
             }
-                width="360" />
+                width="360" height="240" />
         </div>
     )
 

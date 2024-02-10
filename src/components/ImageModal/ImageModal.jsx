@@ -3,7 +3,7 @@ import css from "./ImageModal.module.css"
 
 Modal.setAppElement('#root');
 
-export const ImageModal = ({ modalIsOpen, afterOpenModal, closeModal, onSelectImg: { urls, alt_description, description } }) => {
+export const ImageModal = ({ modalIsOpen, afterOpenModal, closeModal, onSelectImg: { urls, alt_description } }) => {
 
     return (
         <div>
@@ -14,8 +14,7 @@ export const ImageModal = ({ modalIsOpen, afterOpenModal, closeModal, onSelectIm
                 overlayClassName={css.backdrop}
                 className={css.modal}
             >
-                <img className={css.image} src={urls.regular} alt={alt_description} width="500" />
-                <p>{description}</p>
+                <img className={css.image} src={urls.regular} alt={alt_description} width="100%" height="100%" />
             </Modal>
         </div>
     );
