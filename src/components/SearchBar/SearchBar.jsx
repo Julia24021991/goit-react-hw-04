@@ -1,18 +1,19 @@
 import toast from 'react-hot-toast';
+import css from "./SearchBar.module.css"
 
 export const SearchBar = ({ onSearch }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (event.target.elements.query.value === "") {
-            toast("The string is empty!")
+            toast.error("The string is empty!")
             return;
         }
         onSearch(event.target.elements.query.value)
         event.target.reset();
     }
     return (
-        <header>
-            <form onSubmit={handleSubmit}>
+        <header className={css.form}>
+            <form onSubmit={handleSubmit} className={css.form}>
                 <input
                     type="text"
                     autoComplete="off"
