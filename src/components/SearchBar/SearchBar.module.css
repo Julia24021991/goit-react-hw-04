@@ -1,10 +1,29 @@
-.form {
-    position: relative;
+.container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Встановлюємо висоту контейнера на весь екран */
+    margin: auto;
 }
 
-.header {
-    align-items: center;
+.form {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 0;
+
+    /* Вирівнюємо форму по центру */
+}
+
+.input {
+    border-radius: 10px;
+    padding: 5px;
+    border-color: rgb(7, 68, 70);
+    margin-right: 25px;
+}
+
+.button {
+    margin-top: 10px;
+    /* Додатковий відступ між формою та кнопкою */
 }

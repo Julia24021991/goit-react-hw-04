@@ -1,5 +1,6 @@
 import toast from 'react-hot-toast';
-import css from "./SearchBar.module.css"
+import css from "./SearchBar.module.css";
+import { FcSearch } from "react-icons/fc";
 
 export const SearchBar = ({ onSearch }) => {
     const handleSubmit = (event) => {
@@ -12,17 +13,20 @@ export const SearchBar = ({ onSearch }) => {
         event.target.reset();
     }
     return (
-        <header className={css.form}>
-            <form onSubmit={handleSubmit} className={css.form}>
-                <input
-                    type="text"
-                    autoComplete="off"
-                    autoFocus
-                    placeholder="Search images and photos"
-                    name="query"
-                />
-                <button type="submit">Search</button>
-            </form>
-        </header>
+        <div className={css.container}>
+            <header>
+                <form onSubmit={handleSubmit} className={css.form}>
+                    <input
+                        className={css.input}
+                        type="text"
+                        autoComplete="off"
+                        autoFocus
+                        placeholder="Search images and photos"
+                        name="query"
+                    />
+                    <button className={css.button} type="submit"><FcSearch />    Search</button>
+                </form>
+            </header>
+        </div>
     )
 }
